@@ -1,0 +1,121 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  backdrop-filter: blur(20px);
+  z-index: 1;
+  form {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(216, 216, 216, 0.103);
+    input {
+      width: 80%;
+      padding: 10px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+    }
+    button {
+      width: 20%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(204, 44, 105);
+      color: white;
+      transition: all ease 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(177, 48, 97);
+        transition: 0.3s;
+      }
+    }
+  }
+  .responsive-search-icon {
+    display: none;
+  }
+}
+
+// Resonsive Design
+
+@media screen and (max-width: 1000px) {
+  .header {
+    form {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    form {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding: 10px;
+    form {
+      display: none;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    .responsive-search-icon {
+      display: block;
+      font-size: 1.3rem;
+      z-index: 2;
+    }
+  }
+
+  // Responsive Nav Bar
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .responsive-search-bar {
+    width: 100%;
+    form {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(138, 101, 114);
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      input {
+        width: 70%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: transparent;
+        border: transparent;
+        outline: none;
+        color: white;
+      }
+      button {
+        width: 30%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(204, 44, 105);
+        border: transparent;
+        outline: none;
+      }
+    }
+  }
+}

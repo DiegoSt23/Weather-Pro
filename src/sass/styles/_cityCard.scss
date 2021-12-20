@@ -1,0 +1,146 @@
+.city-card {
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(216, 216, 216, 0.068);
+  margin-top: 200px;
+  box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.068);
+  margin-bottom: 60px;
+  .city-info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      color: rgb(206, 206, 206);
+    }
+  }
+  .city-weather-container {
+    width: 100%;
+    display: flex;
+    margin: 30px 0px;
+    .main-details-container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 30px;
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        margin-top: 20px;
+      }
+    }
+    .details-container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-left: solid 1px rgba(214, 214, 214, 0.226);
+      .detail-container {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0px;
+      }
+    }
+  }
+  .forecast-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    .forecast-card {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: rgba(216, 216, 216, 0.103);
+      box-shadow: 5px 5px 10px 5px rgba(26, 26, 26, 0.041);
+      margin-bottom: 30px;
+      .detail {
+        color: rgb(206, 206, 206);
+        margin-top: 10px;
+      }
+    }
+  }
+  .options {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    h4 {
+      cursor: pointer;
+      color: rgb(204, 44, 105);
+    }
+  }
+}
+
+.error-message-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Resonsive Design
+
+@media screen and (max-width: 1000px) {
+  .city-card {
+    width: 80%;
+    .city-weather-container {
+      .details-container {
+        .detail-container {
+          width: 65%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .city-card {
+    width: 90%;
+    .city-weather-container {
+      .details-container {
+        .detail-container {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .city-card {
+    width: 95%;
+    margin-top: 120px;
+    .city-weather-container {
+      flex-direction: column;
+      .main-details-container {
+        width: 100%;
+      }
+      .details-container {
+        width: 100%;
+        border: none;
+        .detail-container {
+          width: 100%;
+        }
+      }
+    }
+    .forecast-container {
+      .forecast-card {
+        width: 100%;
+      }
+    }
+  }
+}
