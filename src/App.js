@@ -35,8 +35,8 @@ function App() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: "just", duration: 1 }}
           >
-            Use the options above to find the current weather and 7 day forecast
-            in any city of the world or in your current location.
+            Use the input above to find the current weather and 7 day forecast
+            in any city of the world.
           </motion.p>
         </div>
       )}
