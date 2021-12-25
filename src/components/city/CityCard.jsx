@@ -43,7 +43,6 @@ const CityCard = ({ query, viewStatus, setViewStatus }) => {
           setHumidity(res.data.main.humidity);
           setLat(res.data.coord.lat);
           setLon(res.data.coord.lon);
-          console.log(res);
         } catch (error) {
           setRequestStatus(false);
         }

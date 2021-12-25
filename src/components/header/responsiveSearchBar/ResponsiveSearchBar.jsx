@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Backdrop from "./Backdrop";
 
 // useWindowDimensions
-import useWindowDimensions from "../../../useWindowDimensions/useWindowDimensions";
+import useWindowDimensions from "../../../customHooks/useWindowDimensions/useWindowDimensions";
 
 // Framer Motion
 import { motion } from "framer-motion";

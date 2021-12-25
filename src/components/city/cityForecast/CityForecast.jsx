@@ -21,13 +21,14 @@ const CityForecast = ({ lat, lon }) => {
   ));
 
   useEffect(() => {
-    if (lat) {
+    if (lat && lon) {
       const func = async () => {
         try {
           const res = await getWeatherForecast(lat, lon);
           setWeatherForecast(res.data.daily);
-          console.log(res.data.daily);
-        } catch (eror) {}
+        } catch (error) {
+          console.log(error);
+        }
       };
       func();
     }

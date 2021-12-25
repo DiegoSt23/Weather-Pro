@@ -8,6 +8,14 @@ const getCityWeather = async (value) => {
   return promise;
 };
 
+const getCurrentLocationWeather = async (lat, lon) => {
+  const promise = await axios({
+    method: "GET",
+    url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=f45251d3ea56d5b3855dcf77bcd6d099`,
+  });
+  return promise;
+};
+
 const getWeatherForecast = async (lat, lon) => {
   const promise = await axios({
     method: "GET",
@@ -16,4 +24,4 @@ const getWeatherForecast = async (lat, lon) => {
   return promise;
 };
 
-export { getCityWeather, getWeatherForecast };
+export { getCityWeather, getCurrentLocationWeather, getWeatherForecast };
